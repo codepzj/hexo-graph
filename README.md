@@ -1,6 +1,6 @@
 # hexo-graph
 
-> hexo-graph，一个基于 echarts，集成博客热力图，博客月份统计图，分类统计图，标签统计图的多元化插件。
+> hexo-graph，一个基于 echarts，集成博客热力图，博客月份统计图，分类统计图，标签统计图的多元化可交互插件。
 
 具体效果：https://haohanxinghe.com/social/stats/
 
