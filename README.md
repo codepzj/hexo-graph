@@ -7,8 +7,6 @@
 - [NPMJS](https://www.npmjs.com/package/hexo-graph?activeTab=readme)
 - [GitHub](https://github.com/codepzj/hexo-graph)
 
-在此感谢 [姓王者](https://github.com/xingwangzhe)大佬**Pr**,[增加交互性，为每个统计图的子元素添加跳转](https://github.com/codepzj/hexo-graph/pull/1)
-
 ## 安装依赖
 
 ```bash
@@ -31,52 +29,67 @@ hexo_graph:
   theme: "dark" #light/dark 不设置或不填默认是light
 ```
 
+**进阶主题配色**
+目前该插件支持自定义颜色，monthlyColors 只允许填一个主题颜色，其他支持多个
+不配置则采用默认配置
+
+```yaml
+hexo_graph:
+  theme: "light" # 或者 'dark'
+  monthlyColors:
+    - "#FF9A8B" # 粉红色与橙色的渐变
+  heatmapColors:
+    - "#A3DFF7" # 浅天蓝色
+    - "#B5D8C4" # 浅绿松石色
+    - "#F7C9B7" # 浅珊瑚色
+  tagsColors:
+    - "#F2A7D1" # 粉紫色
+    - "#F5E05D" # 明亮的黄绿色
+    - "#D74B76" # 玫瑰红色
+    - "#1EAEAC" # 湖蓝色
+    - "#FFC836" # 浅橙色
+    - "#A8A2FF" # 薰衣草紫
+    - "#A9E9FF" # 浅天蓝色
+    - "#FF6767" # 鲜艳红色
+  categoriesColors:
+    - "#4C8C99" # 青蓝色
+    - "#F9B5E2" # 浅桃粉色
+```
+
+![image-20241231223115464](https://image.codepzj.cn/image/202412312231916.png)
+
+![image-20241231223150999](https://image.codepzj.cn/image/202412312231480.png)
+
 ## 使用方法
 
-在**任意页面**中导入以下 html 标签，一定要带 id 标签(如**heatmapChart**)
-
-### 热力图
+在**任意页面**中导入以下 html 标签
 
 ```html
 ### Blog Heatmap
 
 <div
   id="heatmapChart"
-  style="width: 100%; height: 200px; margin: 0 auto; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+  style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
 ></div>
-```
 
-![热力图](https://image.codepzj.cn/image/202412022134428.png)
+### Monthly Article Statistics
 
-### 月份统计图
-
-```html
 <div
   id="monthlyChart"
-  style="width: 100%; height: 350px; margin: 0 auto; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+  style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
 ></div>
-```
 
-![月份统计图](https://image.codepzj.cn/image/202412022135436.png)
+### Tag Statistics
 
-### 标签统计图
-
-```html
 <div
   id="tagsChart"
-  style="width: 100%; height: 400px; margin: 0 auto; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+  style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
 ></div>
-```
 
-![标签统计图](https://image.codepzj.cn/image/202412022136846.png)
+### Category Statistics
 
-### 分类统计图
-
-```html
 <div
   id="categoriesChart"
-  style="width: 100%; height: 350px; margin: 0 auto; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+  style="width: 100%; height: 350px;; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
 ></div>
 ```
-
-![分类统计图](https://image.codepzj.cn/image/202412022137058.png)
