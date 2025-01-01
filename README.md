@@ -56,6 +56,20 @@ hexo_graph:
     - "#F9B5E2" # 浅桃粉色
 ```
 
+**Heatmap年份配置**
+可以在 html 标签中添加`year`属性，来指定年份，不填默认为当前年份
+
+```html
+### Blog Heatmap
+
+<div
+  id="heatmapChart"
+  year="2024"
+  style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+></div>
+```
+
+
 ![image-20241231223115464](https://image.codepzj.cn/image/202412312231916.png)
 
 ![image-20241231223150999](https://image.codepzj.cn/image/202412312231480.png)
