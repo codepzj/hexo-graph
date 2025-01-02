@@ -111,10 +111,9 @@ hexo_graph:
   style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
 ></div>
 
-### Category Statistics
-
+### Category Tree Statistics
 <div
-  id="categoriesChart"
+  id="categoriesTreeChart"
   style="width: 100%; height: 350px;; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
 ></div>
 ```
