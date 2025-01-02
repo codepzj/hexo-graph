@@ -69,6 +69,8 @@ hexo_graph:
 ></div>
 ```
 
+**Heatmap年份切换**
+当鼠标悬停在 heatmap 图标左侧或者右侧的时候，会显示向后或者向前的箭头，点击箭头可以切换到上一年或者下一年的数据
 
 ![image-20241231223115464](https://image.codepzj.cn/image/202412312231916.png)
 
