@@ -81,9 +81,11 @@ hexo_graph:
 ></div>
 ```
 
-![image-20241231223115464](https://image.codepzj.cn/image/202412312231916.png)
+![image-20241231223115464](./image/202412312231916.png)
 
-![image-20241231223150999](https://image.codepzj.cn/image/202412312231480.png)
+![image-20241231223150999](./image/202412312231480.png)
+
+![image-20250102194044735](./image/202501021940240.png)
 
 ## 使用方法
 
