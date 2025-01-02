@@ -1,0 +1,40 @@
+name: npm-publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  npm-publish:
+    name: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Install Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: "20.12.0"
+
+    - name: Use Taobao registry
+      run: npm config set registry https://registry.npmmirror.com
+
+    # Install dependencies
+    - name: Install packages
+      run: npm install --no-frozen-lockfile
+
+    - name: npm login to npm registry
+      run: |
+        echo "//registry.npmmirror.com/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      env:
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+    - name: Publish package
+      run: npm publish --access public
+
+    # Sync npm mirror after publish
+    - name: Sync hexo-graph
+      run: npm run postpublish
