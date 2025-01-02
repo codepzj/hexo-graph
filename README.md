@@ -1,8 +1,14 @@
-push 或 pr 请按这个格式
-自动发布 npm 包格式
-release: 1.0.x - <commit-message>
-并且修改package.json中的版本号
-将自动发布npm包和同步包到淘宝镜像
+**push 或 pr 请按这个格式**
+
+```bash
+# merge将会自动发布 npm 包格式
+feat: xxx
+fix: xxx
+```
+
+并且修改 package.json 中的**版本号**
+
+将自动发布 npm 包和同步包到淘宝镜像
 
 > hexo-graph，一个基于 echarts，集成博客热力图，博客月份统计图，分类统计图，标签统计图的多元化可交互插件。
 
