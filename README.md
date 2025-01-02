@@ -22,28 +22,91 @@ fix: xxx
 ## 安装依赖
 
 ```bash
-pnpm i moment # 使用hexo-graph先安装相关依赖
+pnpm i moment # 使用 hexo-graph 前先安装相关依赖
 pnpm i hexo-graph
 ```
 
-在根目录的`config.yml`中配置:
-**light 主题配置**
+## 配置说明
+
+在根目录的 `config.yml` 中配置主题：
+
+### Dark 主题配置
 
 ```yaml
 hexo_graph:
-  theme: "light" #light/dark 不设置或不填默认是light
+  theme: "dark" # light/dark，默认是 light
 ```
 
-**dark 主题配置**
+### Heatmap 年份切换
 
-```yaml
-hexo_graph:
-  theme: "dark" #light/dark 不设置或不填默认是light
+当鼠标悬停在 Heatmap 图标的左侧或右侧时，会显示向后或向前的箭头，点击箭头可以切换到上一年或下一年的数据。
+
+![heatmap-year-navi-left.png](image/heatmap-year-navi-left.png)
+![heatmap-year-navi-right.png](image/heatmap-year-navi-right.png)
+
+## 使用方法
+
+在**任意页面**中导入以下 HTML 标签：
+
+```html
+### Blog Heatmap
+>
+<div id="heatmapChart" year="2024" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; 
+border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
 ```
 
-**进阶主题配色**
-目前该插件支持自定义颜色，monthlyColors 只允许填一个主题颜色，其他支持多个
-不配置则采用默认配置
+![demo-blog-heatmap.png](image/demo-blog-heatmap.png)
+
+```html
+### Monthly Article Statistics
+<div id="monthlyChart"
+     style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+```
+
+![demo-monthly-line-chart.png](image/demo-monthly-line-chart.png)
+
+```html
+### Tag Statistics
+<div id="tagsChart"
+     style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+```
+
+![demo-tags-pie-chart.png](image/demo-tags-pie-chart.png)
+
+```html
+### Category Statistics
+<div id="categoriesChart"
+     style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+```
+
+![demo-category-bar-chart.png](image/demo-category-bar-chart.png)
+
+```html
+### CategoryTree Statistics
+<div id="categoriesTreeChart"
+     style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+```
+
+![demo-category-tree-chart.png](image/demo-category-tree-chart.png)
+
+## 进阶配置
+
+### Heatmap 年份配置
+
+可以在 HTML 标签中添加 `year` 属性来指定年份，不填默认为当前年份。
+
+```html
+
+<div
+        id="heatmapChart"
+        year="2024"
+        style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+></div>
+```
+
+### 自定义配色
+
+该插件支持自定义颜色。`monthlyColors` 只允许填一个主题颜色，其他颜色支持多个，不配置则采用默认配置。
 
 ```yaml
 hexo_graph:
@@ -66,49 +129,4 @@ hexo_graph:
   categoriesColors:
     - "#4C8C99" # 青蓝色
     - "#F9B5E2" # 浅桃粉色
-```
-
-**Heatmap 年份配置**
-可以在 html 标签中添加`year`属性，来指定年份，不填默认为当前年份
-
-```html
-### Blog Heatmap
-
-<div
-  id="heatmapChart"
-  year="2024"
-  style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
-></div>
-```
-
-![image-20241231223115464](./image/202412312231916.png)
-
-![image-20241231223150999](./image/202412312231480.png)
-
-![image-20250102194044735](./image/202501021940240.png)
-
-## 使用方法
-
-在**任意页面**中导入以下 html 标签
-
-```html
-### Blog Heatmap
-
-<div id="heatmapChart" year="2024" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
-
-### Monthly Article Statistics
-
-<div id="monthlyChart" style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
-
-### Tag Statistics
-
-<div id="tagsChart" style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
-
-### Category Statistics
-
-<div id="categoriesChart" style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
-
-### CategoryTree Statistics
-
-<div id="categoriesTreeChart" style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
 ```
