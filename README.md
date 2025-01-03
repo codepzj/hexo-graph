@@ -50,41 +50,35 @@ hexo_graph:
 
 ```html
 ### Blog Heatmap
->
-<div id="heatmapChart" year="2024" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; 
-border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+<div id="heatmapChart" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
 ![demo-blog-heatmap.png](image/demo-blog-heatmap.png)
 
 ```html
 ### Monthly Article Statistics
-<div id="monthlyChart"
-     style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+<div id="monthlyChart" style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
 ![demo-monthly-line-chart.png](image/demo-monthly-line-chart.png)
 
 ```html
 ### Tag Statistics
-<div id="tagsChart"
-     style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+<div id="tagsChart" style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
 ![demo-tags-pie-chart.png](image/demo-tags-pie-chart.png)
 
 ```html
 ### Category Statistics
-<div id="categoriesChart"
-     style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+<div id="categoriesChart" style="width: 100%; height: 350px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
 ![demo-category-bar-chart.png](image/demo-category-bar-chart.png)
 
 ```html
 ### CategoryTree Statistics
-<div id="categoriesTreeChart"
-     style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></div>
+<div id="categoriesTreeChart" style="width: 100%; height: 400px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
 ![demo-category-tree-chart.png](image/demo-category-tree-chart.png)
@@ -96,12 +90,7 @@ border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
 可以在 HTML 标签中添加 `year` 属性来指定年份，不填默认为当前年份。
 
 ```html
-
-<div
-        id="heatmapChart"
-        year="2024"
-        style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
-></div>
+<div id="heatmapChart" year="2024" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
 ### 自定义配色
