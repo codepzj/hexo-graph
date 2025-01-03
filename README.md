@@ -35,6 +35,7 @@ pnpm i hexo-graph
 ```yaml
 hexo_graph:
   theme: "dark" # light/dark，默认是 light
+  echarts_js: "/vendor/js/echarts.min.js" # 可自定义地址，不填写默认为jsd的cdn
 ```
 
 ### Heatmap 年份切换
