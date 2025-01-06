@@ -40,10 +40,8 @@ hexo_graph:
 
 ### Heatmap 年份切换
 
-当鼠标悬停在 Heatmap 图标的左侧或右侧时，会显示向后或向前的箭头，点击箭头可以切换到上一年或下一年的数据。
-
-![heatmap-year-navi-left.png](image/heatmap-year-navi-left.png)
-![heatmap-year-navi-right.png](image/heatmap-year-navi-right.png)
+点击右侧的年份切换按钮，可以切换年份。如果年份太多，会分页。
+![heatmap-year-navi.png](image/heatmap-year-navi.png)
 
 ## 使用方法
 
@@ -88,9 +86,10 @@ hexo_graph:
 
 ### Heatmap 年份配置
 
-可以在 HTML 标签中添加 `year` 属性来指定年份，不填默认为当前年份。
+可以在 HTML 标签中添加 `year` 属性来指定年份，不填默认为当前年份。如果选中年份或者当前年份，不在数据范围内，则会显示最近有数据的年份。
 
 ```html
+
 <div id="heatmapChart" year="2024" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
 ```
 
